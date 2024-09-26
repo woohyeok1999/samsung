@@ -1,0 +1,309 @@
+/*----------------*/
+.defect-rate-main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+    position: relative; /* 가상 요소를 위한 상대 위치 */
+}
+
+.defect-rate-main-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../../../public/background-ship.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5; /* 투명도 설정 */
+    z-index: -1; /* 배경 이미지가 콘텐츠 뒤에 오도록 */
+}
+/*----------------*/
+
+.defect-rate-top-row {
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    height: 500px;
+}
+
+.defect-rate-red-section {
+    width: 220px;
+    height: 100%;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.defect-rate-orange-yellow {
+    display: flex;
+    gap: 30px;
+    flex-grow: 1;
+    height: 100%;
+}
+
+.defect-rate-orange-section,
+.defect-rate-yellow-section {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.defect-rate-orange-section {
+    width: 450px;
+}
+
+.defect-rate-yellow-section {
+    flex-grow: 1;
+}
+
+.defect-rate-bottom-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    height: auto; /* 고정 높이 제거 */
+}
+
+.defect-rate-green-section {
+    flex: 2;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    max-height: 750px; /* 최대 높이 지정 */
+    height: 100%; /* 가능한 전체 높이 사용 */
+    overflow-y: auto; /* 세로 스크롤바 추가 */
+}
+
+.defect-rate-blue-section {
+    flex: 1;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 750px;
+    height: 100%; /* 부모 요소의 전체 높이를 사용 */
+    text-align: center;
+}
+
+.chart-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.defect-rate-green-section .chart-title {
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+
+/* 수정: 테이블 컨테이너 스타일 추가 */
+.table-container {
+    flex-grow: 1;
+    overflow-y: auto; /* 세로 스크롤만 허용 */
+    margin-top: 20px;
+    max-height: calc(100% - 100px); /* 추가: 최대 높이 제한 (헤더와 버튼 공간 고려) */
+}
+
+/* 수정: 테이블 스타일 변경 */
+.defect-rate-green-section table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.defect-rate-green-section th,
+.defect-rate-green-section td {
+    border: 1px solid #e0e0e0;
+    padding: 12px;
+    text-align: center;
+    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+    overflow: hidden;
+    text-overflow: ellipsis; /* 넘치는 텍스트에 ... 표시 */
+}
+
+.defect-rate-green-section th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+    color: #333;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.defect-rate-green-section td input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* 수정: 액션 버튼 스타일 추가 */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.action-buttons button {
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.action-buttons button:hover {
+    background-color: #45a049;
+}
+
+.action-buttons button:last-child {
+    background-color: #f44336;
+}
+
+.action-buttons button:last-child:hover {
+    background-color: #d32f2f;
+}
+
+/* 검색 바 스타일 */
+.search-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+/* Add a custom styled button */
+.styled-button {
+    background-color: #2196f3; /* 버튼의 배경색(기존 : 007bff) */
+    color: white; /* 텍스트 색상 */
+    border: none; /* 테두리 제거 */
+    border-radius: 8px; /* 버튼의 둥근 테두리 */
+    padding: 10px 30px; /* 여백 */
+    font-size: 16px; /* 텍스트 크기 */
+    cursor: pointer; /* 커서 포인터 */
+    transition: background-color 0.3s ease; /* 부드러운 배경색 전환 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+}
+
+.styled-button:hover {
+    background-color: #007bff; /* 마우스 오버 시 더 짙은 파란색(기존 : 0056b3) */
+}
+
+.styled-button:active {
+    background-color: #0056b3; /* 클릭 시 더 진한 파란색(기존 : 004494) */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 클릭 시 그림자 조정 */
+}
+
+
+/* 모달 스타일 */
+.green-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.green-modal-content {
+    background-color: white;
+    padding: 30px;
+    padding-right: 50px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    max-width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    z-index: 1001;
+}
+
+.green-modal h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.green-modal form {
+    display: grid;
+    gap: 15px;
+}
+
+.green-modal input,
+.green-modal textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.green-modal textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.green-modal button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-right: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.green-modal button:hover {
+    background-color: #45a049;
+}
+
+.green-modal button:last-child {
+    background-color: #f44336;
+    margin-right: -22px;
+}
+
+.green-modal button:last-child:hover {
+    background-color: #d32f2f;
+}

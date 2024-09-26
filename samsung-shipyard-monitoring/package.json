@@ -1,0 +1,45 @@
+{
+  "name": "samsung-shipyard-monitoring",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "create-admin": "node server/scripts/createAdmin.js",
+    "start": "node server/index.js",
+    "dev": "set HTTPS=true && set SSL_CRT_FILE=./localhost+2.pem && set SSL_KEY_FILE=./localhost+2-key.pem && nodemon server/index.js",
+    "client": "cd client && set HTTPS=true && set SSL_CRT_FILE=../localhost+2.pem && set SSL_KEY_FILE=../localhost+2-key.pem && npm start",
+    "build": "cd client && GENERATE_SOURCEMAP=false npm run build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.5",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "chart.js": "^4.4.4",
+    "chartjs-adapter-date-fns": "^3.0.0",
+    "cheerio": "^1.0.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "d3": "^7.9.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "forecast": "^0.3.2",
+    "holtwinters": "^0.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^0.445.0",
+    "mysql2": "^3.11.0",
+    "python-shell": "^5.0.0",
+    "sequelize": "^6.37.3",
+    "socket.io": "^4.8.0",
+    "xss-clean": "^0.1.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "description": ""
+}

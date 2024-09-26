@@ -1,0 +1,105 @@
+.summary-title {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.summary-chart {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 18px;
+  color: #666;
+}
+
+/* Recharts 스타일 커스터마이징 */
+.recharts-cartesian-axis-tick-value {
+  font-size: 12px;
+  fill: #666;
+}
+
+.recharts-tooltip-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.recharts-default-tooltip {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border: none !important;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  padding: 10px !important;
+}
+
+.recharts-label-list text {
+  font-size: 12px;
+  font-weight: bold;
+  fill: #333;
+}
+
+.recharts-responsive-container {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.recharts-wrapper {
+  width: 100% !important;
+  height: 100% !important;
+  overflow: visible;
+}
+
+/* Y축 레이블 조정 */
+.recharts-yAxis .recharts-cartesian-axis-tick-value {
+  transform: translateX(-5px);
+}
+
+/* X축 위치 조정 */
+.recharts-xAxis {
+  transform: translateY(0px);
+}
+
+/* 그래프 영역 조정 */
+.recharts-surface {
+  overflow: visible;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-appear {
+  opacity: 0;
+}
+
+.fade-appear-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}

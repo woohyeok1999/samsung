@@ -1,0 +1,208 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.design-structure {
+  min-height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/*----------------*/
+.design-structure-main-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+  flex-grow: 1;
+  position: relative;
+}
+
+.design-structure-main-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../../../public/background-ship.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  z-index: -1;
+}
+/*----------------*/
+
+.red-section {
+  margin-bottom: 20px;
+  background-color: white;
+  width: 100%;
+  overflow: auto;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-sizing: border-box; /* 추가 */
+  max-height: 500px; /* 최대 높이 설정 */
+  overflow-y: auto;  /* 세로 스크롤바 */
+}
+
+.design-structure-content-row {
+  display: flex;
+  gap: 20px;
+  flex-grow: 1;
+  min-height: 350px;
+  margin-bottom: 20px;
+}
+
+.visualization-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  justify-content: center;
+  min-width: max-content;
+}
+
+.visualization-card {
+  flex: 0 0 auto;
+  width: 250px;
+  background: #f8f9fa;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.orange-section,
+.purple-section,
+.green-section,
+.blue-section {
+  flex: 1;
+  overflow: auto;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.orange-section { background-color: white; }
+.purple-section { background-color: white; }
+.green-section { background-color: white; }
+.blue-section { background-color: white; }
+
+/* 스크롤바 스타일 */
+.red-section::-webkit-scrollbar,
+.orange-section::-webkit-scrollbar,
+.purple-section::-webkit-scrollbar,
+.green-section::-webkit-scrollbar,
+.blue-section::-webkit-scrollbar,
+.design-structure::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.red-section::-webkit-scrollbar-thumb,
+.orange-section::-webkit-scrollbar-thumb,
+.purple-section::-webkit-scrollbar-thumb,
+.green-section::-webkit-scrollbar-thumb,
+.blue-section::-webkit-scrollbar-thumb,
+.design-structure::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 3px;
+}
+
+.red-section::-webkit-scrollbar-track,
+.orange-section::-webkit-scrollbar-track,
+.purple-section::-webkit-scrollbar-track,
+.green-section::-webkit-scrollbar-track,
+.blue-section::-webkit-scrollbar-track,
+.design-structure::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+.dpbom-details-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.department-list {
+  flex-grow: 1;
+}
+
+.department-item {
+  margin-bottom: 12px;
+}
+
+.department-name {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.department-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.department-amount {
+  font-size: 14px;
+  color: #555;
+}
+
+.department-percentage {
+  font-size: 14px;
+  color: #007bff;
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #4caf50;
+}
+
+.total-work {
+  margin-top: 15px;
+  font-weight: bold;
+  text-align: right;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align-last: center;
+}
+
+select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0,123,255,.25);
+  text-align: center;
+}
+
+.future-work-prediction {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height:100%;
+  width:100%;
+}

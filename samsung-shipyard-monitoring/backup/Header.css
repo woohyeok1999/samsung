@@ -1,0 +1,175 @@
+.header {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  width: 100%;
+  position: relative;
+  height: 60px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.header-left {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.logo_main {
+  height: 25px;
+  width: auto;
+  display: block;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.nav-item {
+  position: relative;
+  margin: 0 15px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;  /* 색상 변경에 애니메이션 효과 추가 */
+}
+
+.nav-item:hover, .nav-item.active {
+  color: #007bff;  /* 호버 시와 활성 상태일 때 글자 색 변경 */
+  text-decoration: none;  /* 밑줄 제거 */
+}
+
+.header-right {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.user-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+}
+
+.sub-menu-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background-color: white;
+  border-top: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.sub-menu {
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.sub-menu-column {
+  display: none;
+}
+
+.sub-menu-column.active {
+  display: block;
+}
+
+.sub-item {
+  padding: 10px 20px;
+  white-space: nowrap;
+  font-size: 14px;
+  color: #333;
+  text-align: center;  /* 세부 목차 중앙 정렬 */
+}
+
+.sub-item a {
+  text-decoration: none;  /* 세부 목차 링크 밑줄 제거 */
+  color: inherit;
+  transition: color 0.3s ease;  /* 색상 변경에 애니메이션 효과 추가 */
+}
+
+.sub-item:hover {
+  background-color: #e0e0e0;
+}
+
+.sub-item:hover a {
+  color: #007bff;  /* 호버 시 글자 색 변경 */
+}
+
+.home-icon {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.home-icon:hover {
+  color: #007bff;
+}
+
+/* 기존의 Header.css 내용을 유지하고 아래 스타일을 수정합니다 */
+
+.custom-dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 60px;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 1000;
+  min-width: 200px;  /* 드롭다운 메뉴의 최소 너비 설정 */
+}
+
+.custom-dropdown-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;  /* 상하 패딩 추가 */
+}
+
+.custom-dropdown-menu ul li {
+  padding: 10px 20px;  /* 좌우 패딩 증가 */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.custom-dropdown-menu ul li:hover {
+  background-color: #f0f0f0;
+}
+
+.custom-dropdown-menu ul li a,
+.custom-dropdown-menu ul li span {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.custom-dropdown-menu ul li svg {
+  margin-right: 10px;  /* 아이콘과 텍스트 사이 간격 */
+}
+
+/* 구분선 추가 */
+.custom-dropdown-menu ul li:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}

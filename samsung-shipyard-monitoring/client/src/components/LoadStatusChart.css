@@ -1,0 +1,99 @@
+.chart-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .dropdown-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .dropdown-container select {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 14px;
+  }
+  
+  .chart-container {
+    position: relative;
+    height: 250px;
+  }
+  
+  .chart-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .chart-info {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .recommended-capacity,
+  .available-capacity {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 18px;
+    color: #666;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+  
+  .chart-label, .available-capacity {
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  .fade-enter {
+    opacity: 0;
+  }
+  
+  .fade-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+  }
+  
+  .fade-exit {
+    opacity: 1;
+  }
+  
+  .fade-exit-active {
+    opacity: 0;
+    transition: opacity 300ms ease-in;
+  }
+  
+  .fade-appear {
+    opacity: 0;
+  }
+  
+  .fade-appear-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+  }

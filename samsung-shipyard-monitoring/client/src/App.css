@@ -1,0 +1,192 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/*----------------*/
+.main-content {
+  flex: 1;
+  display: flex;
+  padding: 20px;
+  position: relative;
+}
+
+.main-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../public/background-ship.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  z-index: -1;
+}
+/*----------------*/
+
+.left-section, .right-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-section {
+  flex: 2;
+  margin-right: 20px;
+}
+
+.right-section {
+  flex: 1;
+}
+
+.top-row, .bottom-row {
+  display: flex;
+}
+
+.left-section .top-row,
+.right-section .top-row {
+  margin-bottom: 20px;
+}
+
+.left-section .bottom-row,
+.right-section .bottom-row {
+  flex: 1;
+}
+
+.chart-section {
+  flex: 1;
+  background-color: #ffffff;  /* 배경색을 흰색으로 변경 */
+  margin-right: 20px;
+}
+
+.summary-section {
+  flex: 2;
+  background-color: #ffffff;
+}
+
+.right-section .top-row {
+  flex-direction: column;
+}
+
+.schedule-section, .todo-section {
+  flex: 1;
+}
+
+.todo-section {
+  margin-top: 20px;
+}
+
+.chart-section, .summary-section, .purple-section {
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.calendar-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.calendar-section .calendar {
+  width: 100%;
+  height: 100%;
+}
+
+/* 기존 today-schedule 관련 스타일을 schedule-section으로 이동 */
+/* 기존 App.css 내용은 그대로 유지하고, 아래 스타일을 추가합니다 */
+
+.schedule-section {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.schedule-section h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.schedule-section ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.schedule-section .event-card {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 10px;
+  background-color: #f1f3f5;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.schedule-section .event-card:hover {
+  background-color: #dee2e6;  /* hover 시 약간 더 어두운 색상으로 변경 */
+}
+
+.schedule-section .event-checkbox {
+  margin-right: 12px;
+}
+
+.schedule-section .event-time {
+  font-weight: bold;
+  color: #495057;
+  margin-right: 15px;
+  min-width: 50px;
+}
+
+.schedule-section .event-title {
+  flex-grow: 1;
+  color: #212529;
+}
+
+.schedule-section .event-text.disabled {
+  color: #adb5bd;
+  text-decoration: line-through;
+}
+
+.schedule-section p {
+  color: #6c757d;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* 스크롤바 스타일 */
+.schedule-section::-webkit-scrollbar {
+  width: 6px;
+}
+
+.schedule-section::-webkit-scrollbar-track {
+  background: #f1f3f5;
+}
+
+.schedule-section::-webkit-scrollbar-thumb {
+  background-color: #ced4da;
+  border-radius: 3px;
+}
+
+/* ---------------------------*/

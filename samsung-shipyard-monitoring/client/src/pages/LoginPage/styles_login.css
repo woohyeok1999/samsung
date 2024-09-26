@@ -1,0 +1,166 @@
+/* 로그인 페이지 전용 스타일 */
+.login-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.login-page-header {
+  height: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-page-header-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, #4da6ff, #0066cc, #001f3f);
+}
+
+.login-page-main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: #fcfefe;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-page-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 2rem;
+  border-radius: 8px;
+  position: relative;
+  z-index: 2;
+}
+
+.login-page-animated-logo {
+  width: 400px;
+  height: auto;
+  margin-right: 2rem;
+}
+
+.login-page-form {
+  width: 300px;
+  padding: 0;
+  border-radius: 8px;
+  background-color: transparent;
+  box-shadow: none;
+  margin-left: -7.7rem;
+  margin-top: 11rem;
+}
+
+.login-page-form-group {
+  margin-bottom: 1rem;
+}
+
+.login-page-form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.login-page-input {
+  width: 300px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.login-page-button {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.login-page-button:hover {
+  background-color: #004d99;
+}
+
+.login-page-links-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.login-page-link {
+  color: #0066cc;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.login-page-footer {
+  background-color: #8cd7e3;
+  padding: 1rem 0;
+  width: 100%;
+  height: 120px;
+}
+
+.login-page-footer-content {
+  display: flex;
+  align-items: flex-start;
+  padding-left: 2rem;
+  max-width: none;
+  margin: 0;
+}
+
+.login-page-footer-logo {
+  width: 100px;
+  height: auto;
+  margin-right: 2rem;
+  flex-shrink: 0;
+}
+
+.login-page-footer-text {
+  font-size: 0.8rem;
+  color: #333;
+  flex-grow: 1;
+}
+
+.login-page-footer-text p {
+  margin: 0.2rem 0;
+}
+
+.login-page-error-message {
+  color: red;
+  margin-top: 1rem;
+}
+
+.login-page-ship-image {
+  position: fixed;
+  bottom: 5vh;
+  right: 5vw;
+  width: 12vw;
+  height: auto;
+  z-index: 100;
+  opacity: 1;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 1160px) {
+  .login-page-ship-image {
+    display: none;
+  }
+}
+
+@media (max-height: 700px) {
+  .login-page-ship-image {
+    display: none;
+  }
+}
